@@ -34,6 +34,11 @@ const HeaderContent = ({ invoice }) => (
             style={{ fontSize: '0.85rem', color: 'blue' }}
           >
             <MenuItem value={invoice.full_name}>{invoice.full_name}</MenuItem>
+            <Typography style={{ paddingLeft: '15px', paddingRight: '15px', paddingBottom: '5px' }}>
+              {invoice.address1} <br />
+              {invoice.address2 && (<>{invoice.address2}<br /></>)}
+              {invoice.city}, {invoice.state} &nbsp; {invoice.zipcode}
+            </Typography>
           </Select>
         </Grid>
       </Grid>
